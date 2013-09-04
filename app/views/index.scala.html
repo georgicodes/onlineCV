@@ -1,0 +1,15 @@
+@(techStack: List[TechnologyProduct])
+    @main("Technology Stack") {
+        <h3>This site is build with</h3>
+
+        <dl>
+        @for(tech <- techStack) {
+            <dt>
+                @*<a href="@routes.Application.details(tech.id)">*@
+                    @tech.name
+                @*</a>*@
+            </dt>
+            @*<dd>@product.description</dd>*@
+        }
+        </dl>
+    }
